@@ -4773,10 +4773,10 @@ void PlayerbotFactory::InitAttunementQuests()
         11482, // Duty Calls
         11488, // Magisters' Terrace
         11490, // The Scryer's Scryer
-        11492  // Hard to Kill
+        11492, // Hard to Kill
 
         // Serpentshrine Cavern
-        13431, // The Cudgel of Ka'rdesh
+        13431  // The Cudgel of Ka'rdesh
     };
 
     // Complete all level-appropriate attunement quests for the bot
