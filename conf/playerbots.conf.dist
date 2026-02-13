@@ -563,7 +563,7 @@ AiPlayerbot.AutoGearScoreLimit = 0
 # Default: food, taxi, and raid are enabled
 AiPlayerbot.BotCheats = "food,taxi,raid"
 
-# TBC attunement quests (comma-separated list of quest IDs)
+# Attunement quests (comma-separated list of quest IDs)
 # Default:
 # Caverns of Time - Part 1
 # - 10279, To The Master's Lair
