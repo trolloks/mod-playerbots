@@ -1799,10 +1799,6 @@ void PlayerbotFactory::InitEquipment(bool incremental, bool second_chance)
                 {
                     for (uint32 itemId : sRandomItemMgr.GetCachedEquipments(requiredLevel, inventoryType))
                     {
-                        if (itemId == 46978)  // shaman earth ring totem
-                        {
-                            continue;
-                        }
                         uint32 skipProb = 25;
                         if (urand(1, 100) <= skipProb)
                             continue;
@@ -4778,6 +4774,9 @@ void PlayerbotFactory::InitAttunementQuests()
         11488, // Magisters' Terrace
         11490, // The Scryer's Scryer
         11492  // Hard to Kill
+
+        // Serpentshrine Cavern
+        13431, // The Cudgel of Ka'rdesh
     };
 
     // Complete all level-appropriate attunement quests for the bot
