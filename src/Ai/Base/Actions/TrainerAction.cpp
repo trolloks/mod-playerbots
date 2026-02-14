@@ -256,12 +256,6 @@ bool MaintenanceAction::Execute(Event /*event*/)
 
 bool InstanceUnbindAction::Execute(Event /*event*/)
 {
-    /*if (!sPlayerbotAIConfig.instanceUnbindCommand)
-    {
-        botAI->TellError("instance unbind command is not allowed, please check the configuration.");
-        return false;
-    }*/
-
     botAI->TellMaster("I'm unbinding instances");
 
     PlayerbotFactory factory(bot, bot->GetLevel());
