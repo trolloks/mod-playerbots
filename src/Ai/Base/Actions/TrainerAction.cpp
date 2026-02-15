@@ -4,7 +4,6 @@
  */
 
 #include "TrainerAction.h"
-
 #include "BudgetValues.h"
 #include "Event.h"
 #include "PlayerbotFactory.h"
@@ -255,8 +254,7 @@ bool MaintenanceAction::Execute(Event /*event*/)
     return true;
 }
 
-
-bool InstanceUnbindAction::Execute(Event event)
+bool InstanceUnbindAction::Execute(Event /*event*/)
 {
     /*if (!sPlayerbotAIConfig.instanceUnbindCommand)
     {
