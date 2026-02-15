@@ -37,6 +37,13 @@ public:
     bool Execute(Event event) override;
 };
 
+class InstanceUnbindAction : public Action
+{
+public:
+    InstanceUnbindAction(PlayerbotAI* botAI) : Action(botAI, "instance unbind") {}
+    bool Execute(Event event) override;
+};
+
 class RemoveGlyphAction : public Action
 {
 public:

@@ -255,6 +255,22 @@ bool MaintenanceAction::Execute(Event event)
     return true;
 }
 
+bool InstanceUnbindAction::Execute(Event event)
+{
+    /*if (!sPlayerbotAIConfig.instanceUnbindCommand)
+    {
+        botAI->TellError("instance unbind command is not allowed, please check the configuration.");
+        return false;
+    }*/
+
+    botAI->TellMaster("I'm unbinding instances");
+
+    PlayerbotFactory factory(bot, bot->GetLevel());
+    factory.UnbindInstance();
+
+    return true;
+}
+
 bool RemoveGlyphAction::Execute(Event event)
 {
     for (uint32 slotIndex = 0; slotIndex < MAX_GLYPH_SLOT_INDEX; ++slotIndex)
