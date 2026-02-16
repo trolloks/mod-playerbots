@@ -265,6 +265,16 @@ bool RemoveGlyphAction::Execute(Event /*event*/)
     return true;
 }
 
+bool InstanceUnbindAction::Execute(Event event)
+{
+    botAI->TellMaster("I'm unbinding instances");
+
+    PlayerbotFactory factory(bot, bot->GetLevel());
+    factory.UnbindInstance();
+
+    return true;
+}
+
 bool AutoGearAction::Execute(Event /*event*/)
 {
     if (!sPlayerbotAIConfig.autoGearCommand)

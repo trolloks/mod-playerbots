@@ -62,6 +62,7 @@ public:
         creators["de"] = &ChatTriggerContext::dead;
         creators["trainer"] = &ChatTriggerContext::trainer;
         creators["maintenance"] = &ChatTriggerContext::maintenance;
+        creators["instance unbind"] = &ChatTriggerContext::instance_unbind;
         creators["remove glyph"] = &ChatTriggerContext::remove_glyph;
         creators["autogear"] = &ChatTriggerContext::autogear;
         creators["equip upgrade"] = &ChatTriggerContext::equip_upgrade;
@@ -196,6 +197,7 @@ private:
     static Trigger* attack(PlayerbotAI* botAI) { return new ChatCommandTrigger(botAI, "attack"); }
     static Trigger* trainer(PlayerbotAI* botAI) { return new ChatCommandTrigger(botAI, "trainer"); }
     static Trigger* maintenance(PlayerbotAI* botAI) { return new ChatCommandTrigger(botAI, "maintenance"); }
+    static Trigger* instance_unbind(PlayerbotAI* botAI) { return new ChatCommandTrigger(botAI, "instance unbind"); }
     static Trigger* remove_glyph(PlayerbotAI* botAI) { return new ChatCommandTrigger(botAI, "remove glyph"); }
     static Trigger* autogear(PlayerbotAI* botAI) { return new ChatCommandTrigger(botAI, "autogear"); }
     static Trigger* equip_upgrade(PlayerbotAI* botAI) { return new ChatCommandTrigger(botAI, "equip upgrade"); }
