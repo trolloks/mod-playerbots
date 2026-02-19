@@ -275,7 +275,6 @@ bool InstanceUnbindAction::Execute(Event event)
         botAI->TellError(error);
         return false;
     }
-    
     std::string text = PlayerbotTextMgr::instance().GetBotTextOrDefault(
                 "instance_unbind_response", "I'm unbinding instances", {});
     botAI->TellMaster(text);
