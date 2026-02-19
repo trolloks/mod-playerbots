@@ -267,7 +267,18 @@ bool RemoveGlyphAction::Execute(Event /*event*/)
 
 bool InstanceUnbindAction::Execute(Event event)
 {
-    botAI->TellMaster("I'm unbinding instances");
+    Player* master = GetMaster();
+    if (!master || master->GetSession()->GetSecurity() < SEC_GAMEMASTER)
+    {
+        std::string error = PlayerbotTextMgr::instance().GetBotTextOrDefault(
+                "instance_unbind_gm_error", "You must be a GM to use instance unbind", {});
+        botAI->TellError(error);
+        return false;
+    }
+    
+    std::string text = PlayerbotTextMgr::instance().GetBotTextOrDefault(
+                "instance_unbind_response", "I'm unbinding instances", {});
+    botAI->TellMaster(text);
 
     PlayerbotFactory factory(bot, bot->GetLevel());
     factory.UnbindInstance();
